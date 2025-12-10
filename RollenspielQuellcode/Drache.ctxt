@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Drache
+comment1.params=pName
+comment1.target=Drache(java.lang.String)
+comment2.params=pAngriff
+comment2.target=void\ blocken(int)
+comment3.params=
+comment3.target=int\ angriff()
+comment4.params=min\ max
+comment4.target=int\ zufallszahl(int,\ int)
+numComments=5

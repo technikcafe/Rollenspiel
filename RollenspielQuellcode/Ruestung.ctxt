@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Ruestung
+comment1.params=
+comment1.target=Ruestung()
+comment2.params=
+comment2.target=int\ getVerteidigungspunkte()
+comment3.params=pVeringerung
+comment3.target=void\ veringereRuestungsHaltbarkeit(int)
+numComments=4

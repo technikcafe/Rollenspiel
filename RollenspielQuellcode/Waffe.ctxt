@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Waffe
+comment1.params=
+comment1.target=Waffe()
+comment2.params=pSchaden\ pHaltbarkeit\ pName
+comment2.target=Waffe(int,\ int,\ java.lang.String)
+comment3.params=
+comment3.target=int\ schlagen()
+comment4.params=min\ max
+comment4.target=int\ zufallszahl(int,\ int)
+numComments=5

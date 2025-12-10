@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Held
+comment1.params=pLebenspunkte\ pAngriffschaden\ pFaehigkeit\ pName
+comment1.target=Held(int,\ int,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=Held()
+comment3.params=
+comment3.target=void\ blocken()
+comment4.params=
+comment4.target=void\ angriff()
+comment5.params=
+comment5.target=void\ heilen()
+comment6.params=min\ max
+comment6.target=int\ zufallszahl(int,\ int)
+comment7.params=runden
+comment7.target=void\ spiele(int)
+numComments=8
