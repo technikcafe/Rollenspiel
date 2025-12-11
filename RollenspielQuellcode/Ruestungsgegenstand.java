@@ -1,35 +1,53 @@
+/**
+ * Die Klasse Ruestungsgegenstand repräsentiert einen einzelnen Rüstungsgegenstand
+ * wie Helm, Schild oder Brustpanzer.
+ * 
+ * ToDO:
+ * - schutz über einen Parameter abfragen, dait verschieden Rüstungen verschieden Schutz bieten
+ * 
+ * 
+ */
 public class Ruestungsgegenstand
 {
-    //Eigenschaften des Rüstungsgegenstand
-    private int haltbarkeit;
-    private int schutz;
-    private String name;
-    /*
-     * Konstruktor der Klasse
-     *erstellt ein neues Objekt vom Typ Ruestungsgegenstand
-     *Name wird übernommen und Haltbarkeit sowie Schutz auf die Startwerte gesetzt
+    // Instanzvariablen
+    private int haltbarkeit;    // Haltbarkeit in Prozent (0-100)
+    private int schutz;         // Basisschutz des Rüstungsteils
+    private String typ;         // Art des Rüstungsteils (z.B. "Helm", "Schild")
+
+    /**
+     * Konstruktor für einen Rüstungsgegenstand.
+     * FEHLER: Alle Rüstungsgegenstände haben die gleichen Werte, unabhängig vom Typ.
+     * 
+     * @param pTyp Der Typ des Rüstungsgegenstands
      */
-    public Ruestungsgegenstand(String pName) 
+    public Ruestungsgegenstand(String pTyp)
     {
-        haltbarkeit = 100; //Startwert von Haltbarkeit
-        schutz = 10; //Startwert von schutz
-    }
-    // Diese Methode berechnet die aktuellen Verteidigungspunkte
-    // Sie hängt davon ab, wie viel Haltbarkeit noch vorhanden ist
-    public int getVerteidigungspunkte() {
-        return (int) schutz * (haltbarkeit / 100);
+        haltbarkeit = 100;
+        schutz = 10;
+        typ = pTyp;  
     }
 
-    /*
-     * Methode zur reduzierung der Haltbarkeit der Rüstungsgegenständen
-     * Parameter pHaltbarkeit --> um wie viel die Haltbarkeit sinken soll
-     * Wenn das Ergebniss unter Null fällt wird die Haltbarkeit auf 0 gesetzt 
+    /**
+     * Berechnet die aktuellen Verteidigungspunkte basierend auf Schutz und Haltbarkeit.
+     * FEHLER: Ganzzahldivision führt zu falschen Ergebnissen!
+     * 
+     * @return Die aktuellen Verteidigungspunkte
+     */
+    public int getVerteidigungspunkte() {
+        return (int)( schutz *  (haltbarkeit / 100.0));
+    }
+    
+    /**
+     * Verringert die Haltbarkeit des Rüstungsgegenstands.
+     * FEHLER: Parametername ist irreführend - es sollte pVerringerung heißen.
+     * 
+     * @param pHaltbarkeit Die Menge, um die die Haltbarkeit verringert wird
      */
     public void verringereHaltbarkeit(int pHaltbarkeit) {
         if (haltbarkeit - pHaltbarkeit >= 0) {
-            haltbarkeit -= pHaltbarkeit;// Haltbarkeit verringern 
+            haltbarkeit -= pHaltbarkeit;
         } else {
-            haltbarkeit = 0; // mindeswert
+            haltbarkeit = 0;
         }
     }
 }

@@ -1,11 +1,20 @@
 #BlueJ class context
 comment0.target=Drache
+comment0.text=\r\n\ Die\ Klasse\ Drache\ repr\u00E4sentiert\ einen\ Drachen\ in\ einem\ Spiel.\r\n\ Sie\ verwaltet\ den\ Namen,\ die\ Lebenspunkte\ und\ den\ Angriffsschaden\ des\ Drachen.\r\n
 comment1.params=pName
 comment1.target=Drache(java.lang.String)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ die\ Drache-Klasse.\r\n\ Erstellt\ einen\ Drachen\ mit\ zuf\u00E4lligen\ Lebenspunkten\ zwischen\ 200\ und\ 399.\r\n\ \r\n\ @param\ pName\ Der\ Name\ des\ Drachen\r\n
 comment2.params=pAngriff
 comment2.target=void\ blocken(int)
+comment2.text=\r\n\ Verteidigt\ den\ Drachen\ gegen\ einen\ Angriff.\r\n\ Hat\ eine\ 20%\ Chance,\ dem\ Angriff\ auszuweichen.\r\n\ Wenn\ nicht\ ausgewichen\ wird,\ werden\ Lebenspunkte\ abgezogen.\r\n\ \r\n\ @param\ pAngriff\ Der\ Schadenswert\ des\ Angriffs\r\n
 comment3.params=
 comment3.target=int\ angriff()
-comment4.params=min\ max
-comment4.target=int\ zufallszahl(int,\ int)
-numComments=5
+comment3.text=\r\n\ F\u00FChrt\ einen\ Angriff\ des\ Drachen\ aus.\r\n\ Hat\ eine\ 10%\ Chance\ f\u00FCr\ einen\ kritischen\ Feuerangriff.\r\n\ \r\n\ @return\ Der\ Schadenswert\ des\ Angriffs\r\n
+comment4.params=
+comment4.target=java.lang.String\ getName()
+comment5.params=
+comment5.target=boolean\ besiegt()
+comment6.params=min\ max
+comment6.target=int\ zufallszahl(int,\ int)
+comment6.text=\r\n\ Generiert\ eine\ Zufallszahl\ innerhalb\ eines\ Bereichs.\r\n\ Private\ Hilfsmethode\ f\u00FCr\ Zufallsberechnungen.\r\n\ \r\n\ @param\ min\ Die\ untere\ Grenze\ (inklusive)\r\n\ @param\ max\ Die\ obere\ Grenze\ (exklusive)\r\n\ @return\ Eine\ zuf\u00E4llige\ Ganzzahl\ zwischen\ min\ (inklusive)\ und\ max\ (exklusive)\r\n
+numComments=7

@@ -1,11 +1,16 @@
 #BlueJ class context
 comment0.target=Waffe
+comment0.text=\r\n\ Die\ Klasse\ Waffe\ repr\u00E4sentiert\ eine\ Waffe\ in\ einem\ Spiel.\r\n\ Sie\ verwaltet\ Schadenswert,\ Haltbarkeit\ und\ Namen\ der\ Waffe.\r\n
 comment1.params=
 comment1.target=Waffe()
+comment1.text=\r\n\ Standard-Konstruktor,\ der\ eine\ Waffe\ mit\ Standardwerten\ erstellt.\r\n\ Standardwerte\:\ Schaden\=20,\ Haltbarkeit\=100,\ Name\="Schwert"\r\n
 comment2.params=pSchaden\ pHaltbarkeit\ pName
 comment2.target=Waffe(int,\ int,\ java.lang.String)
+comment2.text=\r\n\ Konstruktor\ mit\ Parametern\ zur\ Erstellung\ einer\ individuellen\ Waffe.\r\n\ ACHTUNG\:\ Dieser\ Konstruktor\ enth\u00E4lt\ einen\ Fehler\ -\ die\ Parameterzuweisungen\ sind\ falsch\!\r\n\ Die\ Parameter\ sollten\ den\ Instanzvariablen\ zugewiesen\ werden,\ nicht\ umgekehrt.\r\n\ \r\n\ @param\ pSchaden\ Der\ Basis-Schadenswert\ der\ Waffe\r\n\ @param\ pHaltbarkeit\ Die\ Haltbarkeit\ der\ Waffe\r\n\ @param\ pName\ Der\ Name\ der\ Waffe\r\n
 comment3.params=
 comment3.target=int\ schlagen()
+comment3.text=\r\n\ F\u00FChrt\ einen\ Schlag\ mit\ der\ Waffe\ aus.\r\n\ Reduziert\ die\ Haltbarkeit\ und\ passt\ den\ Schaden\ an.\r\n\ Wenn\ die\ Haltbarkeit\ auf\ 0\ f\u00E4llt,\ wird\ die\ Waffe\ unbrauchbar.\r\n\ \r\n\ @return\ Den\ aktuellen\ Schadenswert\ nach\ dem\ Schlag\r\n
 comment4.params=min\ max
 comment4.target=int\ zufallszahl(int,\ int)
+comment4.text=\r\n\ Generiert\ eine\ Zufallszahl\ innerhalb\ eines\ Bereichs.\r\n\ Die\ Methode\ ist\ privat,\ da\ sie\ nur\ intern\ verwendet\ wird.\r\n\ \r\n\ @param\ min\ Die\ untere\ Grenze\ (inklusive)\r\n\ @param\ max\ Die\ obere\ Grenze\ (exklusive)\r\n\ @return\ Eine\ zuf\u00E4llige\ Ganzzahl\ zwischen\ min\ (inklusive)\ und\ max\ (exklusive)\r\n
 numComments=5

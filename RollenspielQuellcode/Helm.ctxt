@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Helm
-comment1.params=
-comment1.target=Helm()
-comment2.params=
-comment2.target=int\ getVerteidigungspunkte()
-comment3.params=pHaltbarkeit
-comment3.target=void\ verringereHaltbarkeit(int)
-numComments=4
