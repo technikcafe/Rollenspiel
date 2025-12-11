@@ -1,13 +1,13 @@
 public class Ruestung {
-    private Helm helm;
-    private Schild schild;
-    private Brustpanzer brustpanzer;
+    private Ruestungsgegenstand helm;
+    private Ruestungsgegenstand schild;
+    private Ruestungsgegenstand brustpanzer;
     int summeVerteidigungspunkte;
     
     public Ruestung(){
-        helm = new Helm();
-        schild = new Schild();
-        brustpanzer = new Brustpanzer();
+        helm = new Ruestungsgegenstand("Helm");
+        schild = new Ruestungsgegenstand("Schild");
+        brustpanzer = new Ruestungsgegenstand("Brustpanzer");
         
     }
     
