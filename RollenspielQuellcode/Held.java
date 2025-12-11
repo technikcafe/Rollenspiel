@@ -1,5 +1,6 @@
 public class Held {
     private int lebenspunkte;   
+    private int angriffschaden;
     private String faehigkeit = "heilen";
     private Ruestung meineRuestung;
     private String name;
@@ -8,7 +9,13 @@ public class Held {
     private Drache meinDrache;
 
     public Held(int pLebenspunkte, int pAngriffschaden, String pFaehigkeit, String pName) {
-
+        lebenspunkte = pLebenspunkte;    
+        //faehigkeit = pFaehigkeit
+        angriffschaden = pAngriffschaden;
+        name = pName;
+        meineRuestung = new Ruestung();       
+        meineWaffe = new Waffe();
+        meinDrache = new Drache("Samaug");
     }
 
     public Held() {    
@@ -21,8 +28,8 @@ public class Held {
     }  
     
     /**
-     * Die Methode blocken nimmt den Schaden deas Drachens und verringert ihn um die Verteidigungdpunkte der Rüstung 
-       */
+    * Die Methode blocken nimmt den Schaden des Drachens und verringert ihn um die Verteidigungspunkte der Rüstung 
+    */
     public void blocken() { 
         int angriff = meinDrache.angriff();
         int schaden = angriff - meineRuestung.getVerteidigungspunkte();
