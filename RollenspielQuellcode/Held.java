@@ -11,7 +11,7 @@ public class Held {
 
     }
 
-    public Held() {
+    public Held() {    
         lebenspunkte = 100;    
         //faehigkeit;
         meineRuestung = new Ruestung();
@@ -19,17 +19,27 @@ public class Held {
         meineWaffe = new Waffe();
         meinDrache = new Drache("Samaug");
     }  
-
-    public void blocken() {
+    
+    /**
+     * Die Methode blocken nimmt den Schaden deas Drachens und verringert ihn um die Verteidigungdpunkte der Rüstung 
+       */
+    public void blocken() { 
         int angriff = meinDrache.angriff();
         int schaden = angriff - meineRuestung.getVerteidigungspunkte();
         if(schaden < 0) {
             schaden = 0;
         }
         lebenspunkte = lebenspunkte - schaden;
-        System.out.println("Der Drache hat dich mit "+schaden+" HP Angegriffen, du hast "+ schaden+" Lebenspunkte verloren. Es bleiben dir "+ lebenspunkte+" Lebenspunkte");
+        if (lebenspunkte <= 0){
+            System.out.println("Der Held ist gestorben. Du verlierst!");
+        }else{
+            System.out.println("Der Drache hat dich mit "+schaden+" HP Angegriffen, du hast "+ schaden+" Lebenspunkte verloren. Es bleiben dir "+ lebenspunkte+" Lebenspunkte");
+        }
     }
 
+    /**
+    * Die Methode angriff greift den Drachen mit dem Schaden der Waffe an und sammelt Erfahrungspunkte
+    */
     public void angriff() {
         int schlagen = meineWaffe.schlagen();//Wir lassen uns die Angriffskraft der Waffe geben     
         int angriff = (int) schlagen+erfahrung;            
@@ -39,6 +49,9 @@ public class Held {
         meinDrache.blocken(angriff); 
     }
 
+    /**
+    * Die Methode heilen heilt den Held, wenn er weniger als 100HP hat mit einer Wahrscheinlichkeit von 60% um 30-50 HP
+    */
     public void heilen () {
         if (lebenspunkte < 100) {
             if(zufallszahl(0,100)>40){
@@ -53,17 +66,24 @@ public class Held {
         }
     }
 
-    private int zufallszahl(int min, int max){
-        String a = "Hallo";        
-        return (int) (Math.random()*(max-min)+min);
+    /**
+    * Die Methode zufallszahl generiert eine Zufallszahl zwischen min und max
+    * @param: pMin, pMax
+    */
+    private int zufallszahl(int pMin, int pMax){
+               
+        return (int) (Math.random()*(pMax-pMin)+pMin);
         
     }
 
-    public void spiele(int runden){
-        for(int i = 0; i< runden;i++){
+    /**
+    * Die Methode spielen automatisiert den Kampf
+    * @param: pRunden
+    */
+    public void spiele(int pRunden){
+        for(int i = 0; i< pRunden;i++){
             angriff();
             blocken();
         }
-
     }
 }

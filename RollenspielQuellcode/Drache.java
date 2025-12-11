@@ -9,9 +9,8 @@ public class Drache{
         lebenspunkte = (int) ((Math.random()*200)+200);
         angriffschaden = 50;
     }
-
     public void blocken(int pAngriff){
-        if(zufallszahl(0,100)>80){
+        if(zufallszahl(0,100)>80){ 
             System.out.println("Der Drach weicht dem Angriff aus!");        
             return ;
         }else{
