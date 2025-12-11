@@ -44,7 +44,7 @@ public class Held {
             if(zufallszahl(0,100)>40){
                 int heilung = zufallszahl(30,50);  
                 lebenspunkte += heilung;
-                System.out.println(" Der Held hat sich um "+ heilung +" Lebenspunkte geheilt");
+                System.out.println(" Der Held hat sich um "+ heilung +" Lebenspunkte geheilt und hat jetzt "+ lebenspunkte+ " Lebenspunkte");
             }else{
                 System.out.println(" Das Heilen war leider nicht erfolgreich, es muss der falsche Trank gewesen sein.");
             }  
@@ -54,7 +54,9 @@ public class Held {
     }
 
     private int zufallszahl(int min, int max){
+        String a = "Hallo";        
         return (int) (Math.random()*(max-min)+min);
+        
     }
 
     public void spiele(int runden){
