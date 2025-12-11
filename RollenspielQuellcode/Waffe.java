@@ -25,15 +25,10 @@ public class Waffe
         {
             haltbarkeit = haltbarkeit - 10;
             schaden--;
-            
-        }
-        
-        else
-        {
+        } else {
             schaden = 0;
             System.out.println("Waffe kaputt");
         }
-        
         return schaden;
     }
     private int zufallszahl(int min, int max){
