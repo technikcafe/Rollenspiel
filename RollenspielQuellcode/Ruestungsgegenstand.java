@@ -1,10 +1,10 @@
-public class Brustpanzer
+public class Ruestungsgegenstand
 {
     private int haltbarkeit;
     private int schutz;
     private String name;
 
-    public Brustpanzer()
+    public Ruestungsgegenstand(String pName)
     {
         haltbarkeit = 100;
         schutz = 10;
